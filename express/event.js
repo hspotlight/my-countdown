@@ -27,13 +27,11 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
   }
   context.fillText(line, x, y);
 }
-//const padString ="0";
-//const startDate = new Date().getTime();
-//const endDate = new Date("Oct 30, 2021 09:00:00").getTime();
+
 const numberOfSeconds = (endDate-startDate)
 const endNumberOfSeconds = numberOfSeconds - 100000
-console.log("total seconds"+numberOfSeconds);
-console.log("total numberOfSecondsEnd"+endNumberOfSeconds);
+//console.log("total seconds"+numberOfSeconds);
+//console.log("total numberOfSecondsEnd"+endNumberOfSeconds);
 
 const encoder = new GIFEncoder(320, 240);
 // stream the results as they are available into myanimated.gif
@@ -49,14 +47,14 @@ const canvas = createCanvas(320, 240);
 const ctx = canvas.getContext('2d');
 
  for(let distance=numberOfSeconds;distance>endNumberOfSeconds;distance-=1000){
-   console.log("render"+distance);
+   //console.log("render"+distance);
      // Time calculations for days, hours, minutes and seconds
   let days = Math.floor(distance / (1000 * 60 * 60 * 24));
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  console.log(`d HH mm ss ${days} ${hours} ${minutes} ${seconds}`);
+  //console.log(`d HH mm ss ${days} ${hours} ${minutes} ${seconds}`);
 
 
     // blue rectangle

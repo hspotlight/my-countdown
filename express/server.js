@@ -1,6 +1,7 @@
+'use strict';
 const express = require('express')
 const { eventGif } = require('./event')
-
+const serverless = require('serverless-http');
 const app = express()
 
 app.get('/event.gif', (req, res) => {
@@ -20,6 +21,5 @@ app.get('/event.gif', (req, res) => {
         eventGif(res, endDate, eventName, padString, startDate);
 })
 
-app.listen(3000, () => {
-  console.log('Start server at port 3000.')
-})
+module.exports = app;
+module.exports.handler = serverless(app);
