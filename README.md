@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b954cb94-0f72-4ce7-9327-fe9a3e5dcda7/deploy-status)](https://app.netlify.com/sites/sad-shannon-cc428b/deploys)
+
 # usage
 {host}/on=2021-10-30&text=some%20text
 http://localhost:3000/event-gif?on=2021-10-30&text=some%20text
@@ -7,7 +9,7 @@ http://localhost:3000/event-gif?on=2021-10-30&text=some%20text
 [/] add api
 [] validation
 [/] return file
-[] add server
+[] add server (fix image output)
 [] setup pipeline
 [] show days only
 [] show text on event time
