@@ -6,7 +6,7 @@ http://localhost:3000/event.gif?on=2021-10-30&text=some%20text
 [/] accept input
 [/] add api
 [] validation
-[] return file
+[/] return file
 [] add server
 [] setup pipeline
 [] show days only
@@ -14,8 +14,7 @@ http://localhost:3000/event.gif?on=2021-10-30&text=some%20text
 [] add image
 
 # Thanks
-
-
 https://www.npmjs.com/package/gifencoder
-
+https://github.com/neverendingqs/netlify-express
+https://github.com/netlify/netlify-lambda
 https://codepen.io/nishiohirokazu/pen/jjNyye
