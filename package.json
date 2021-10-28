@@ -4,8 +4,9 @@
   "description": "",
   "main": "functions/server.js",
   "scripts": {
-    "build": "netlify-lambda build express",
-    "start": "nodemon server-local.js"
+    "build": "netlify-lambda build express --config ./webpack.functions.js",
+    "start": "nodemon server-local.js",
+    "serve": "netlify-lambda serve express --config ./webpack.functions.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
     "netlify-lambda": "^1.6.3",
     "nodemon": "^2.0.14",
     "serverless-http": "^2.7.0"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^3.0.0"
   }
 }
