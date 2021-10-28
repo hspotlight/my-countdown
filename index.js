@@ -1,4 +1,4 @@
-const { eventGif } = require('./event')
+const { eventGif } = require('./express/event')
 const fs = require('fs');
 const eventName ="Hacktoberfest Open Hack Day Bangkok 2021";
 const padString ="0";

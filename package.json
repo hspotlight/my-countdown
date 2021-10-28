@@ -2,11 +2,12 @@
   "name": "my-countdown",
   "version": "1.0.0",
   "description": "",
-  "main": "functions/server.js",
+  "main": "functions/event.gif.js",
   "scripts": {
     "build": "netlify-lambda build express --config ./webpack.functions.js",
     "start": "nodemon server-local.js",
-    "serve": "netlify-lambda serve express --config ./webpack.functions.js"
+    "serve": "netlify-lambda serve express --config ./webpack.functions.js",
+    "create": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "gifencoder": "^2.0.1",
     "netlify-lambda": "^1.6.3",
