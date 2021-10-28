@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 app.use(bodyParser.json());
-app.use('/.netlify/functions/event.gif', router);  // path must route to lambda
+app.use('/.netlify/functions/event-gif', router);  // path must route to lambda
 app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 module.exports = app;

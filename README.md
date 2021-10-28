@@ -1,6 +1,6 @@
 # usage
 {host}/on=2021-10-30&text=some%20text
-http://localhost:3000/event.gif?on=2021-10-30&text=some%20text
+http://localhost:3000/event-gif?on=2021-10-30&text=some%20text
 
 # TODO
 [/] accept input
