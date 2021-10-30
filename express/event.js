@@ -29,6 +29,7 @@ function wrapText(context, text, x, y, maxWidth, lineHeight) {
 }
 
 const numberOfSeconds = (endDate-startDate)
+const isStart = numberOfSeconds<=0;
 const endNumberOfSeconds = numberOfSeconds - 100000
 //console.log("total seconds"+numberOfSeconds);
 //console.log("total numberOfSecondsEnd"+endNumberOfSeconds);
@@ -45,7 +46,7 @@ encoder.setQuality(10); // image quality. 10 is default.
 // use node-canvas
 const canvas = createCanvas(320, 240);
 const ctx = canvas.getContext('2d');
-
+let blink = 0;
  for(let distance=numberOfSeconds;distance>endNumberOfSeconds;distance-=1000){
    //console.log("render"+distance);
      // Time calculations for days, hours, minutes and seconds
@@ -66,10 +67,15 @@ const ctx = canvas.getContext('2d');
 
     wrapText(ctx, eventName, 10, 50,300,30)
 
-   ctx.fillText((days+"").padStart(2, padString), 50, 200)
-   ctx.fillText((hours+"").padStart(2, padString), 100, 200)
-   ctx.fillText((minutes+"").padStart(2, padString), 150, 200)
-   ctx.fillText((seconds+"").padStart(2, padString), 200, 200)
+    if(isStart){
+      if((blink++)%2==0)ctx.fillText("now", 150, 200)
+    }else{
+      ctx.fillText((days+"").padStart(2, padString), 50, 200)
+      ctx.fillText((hours+"").padStart(2, padString), 100, 200)
+      ctx.fillText((minutes+"").padStart(2, padString), 150, 200)
+      ctx.fillText((seconds+"").padStart(2, padString), 200, 200)
+    }
+
     encoder.addFrame(ctx);
  }
 
