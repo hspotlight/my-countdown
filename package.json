@@ -7,7 +7,7 @@
     "build": "netlify-lambda build express --config ./webpack.functions.js",
     "start": "nodemon server-local.js",
     "serve": "netlify-lambda serve express --config ./webpack.functions.js",
-    "create": "node index.js"
+    "create:gif": "node index.js"
   },
   "repository": {
     "type": "git",
