@@ -4,6 +4,10 @@
 {host}/on=2021-10-30&text=some%20text
 http://localhost:3000/event-gif?on=2021-10-30&text=some%20text
 
+# when run with npm run start
+1. go to browser
+2. enter http://localhost:3000/.netlify/functions/event-gif
+
 # TODO
 [/] accept input
 [/] add api
