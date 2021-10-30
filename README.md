@@ -24,15 +24,15 @@
     - `text` Event title
 
 # TODO
-[/] accept input
-[/] add api
-[] validation
-[/] return file
-[] add server (fix image output)
-[] setup pipeline
-[] show days only
-[] show text on event time
-[] add image
+- [x] accept input
+- [x] add api
+- [ ] validation
+- [x] return file
+- [ ] add server (fix image output)
+- [ ] setup pipeline
+- [ ] show days only
+- [ ] show text on event time
+- [ ] add image
 
 # Thanks
 https://www.npmjs.com/package/gifencoder
