@@ -17,7 +17,7 @@
 1. Go to the url
 
     ```sh
-    http://localhost:3000/.netlify/functions/event-gif?on=2022-01-01&text=Happy%20New%20Year!
+    http://localhost:9000/.netlify/functions/event-gif?on=2022-01-01&text=Happy%20New%20Year!
     ```
 
     - `on` Event date
