@@ -31,7 +31,7 @@ function eventGif(fs, endDate, eventName, padString, startDate, bgColor) {
   }
 
   const numberOfSeconds = endDate - startDate;
-  const isStart = numberOfSeconds <= 0;
+  const isStarted = numberOfSeconds <= 0;
   const endNumberOfSeconds = numberOfSeconds - 100000;
   //console.log("total seconds"+numberOfSeconds);
   //console.log("total numberOfSecondsEnd"+endNumberOfSeconds);
@@ -72,14 +72,18 @@ function eventGif(fs, endDate, eventName, padString, startDate, bgColor) {
 
     wrapText(ctx, eventName, 10, 50, 300, 30);
 
-    if (isStart) {
-      // eslint-disable-next-line no-plusplus
-      if (blink++ % 2 === 0) ctx.fillText("now", 150, 200);
+    if (isStarted) {
+      if (blink++ % 2 == 0) ctx.fillText("now", 150, 200);
     } else {
+      ctx.fillText(("dd").padStart(2, padString), 50, 170);
+      ctx.fillText(("HH").padStart(2, padString), 100, 170);
+      ctx.fillText(("mm").padStart(2, padString), 150, 170);
+      ctx.fillText(("ss").padStart(2, padString), 220, 170);
+
       ctx.fillText(`${days}`.padStart(2, padString), 50, 200);
       ctx.fillText(`${hours}`.padStart(2, padString), 100, 200);
       ctx.fillText(`${minutes}`.padStart(2, padString), 150, 200);
-      ctx.fillText(`${seconds}`.padStart(2, padString), 200, 200);
+      ctx.fillText(`${seconds}`.padStart(2, padString), 220, 200);
     }
 
     encoder.addFrame(ctx);
