@@ -9,7 +9,7 @@ const HEIGHT = 240;
 const GIFEncoder = require("gifencoder");
 const { createCanvas } = require("canvas");
 
-function eventGif(fs, endDate, eventName, padString, startDate) {
+function eventGif(fs, endDate, eventName, padString, startDate, bgColor) {
   function wrapText(context, text, x, y, maxWidth, lineHeight) {
     const words = text.split(" ");
     let line = "";
@@ -64,7 +64,7 @@ function eventGif(fs, endDate, eventName, padString, startDate) {
     //console.log(`d HH mm ss ${days} ${hours} ${minutes} ${seconds}`);
 
     // blue rectangle
-    ctx.fillStyle = "#0000ff";
+    ctx.fillStyle = bgColor;
     ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
     ctx.fillStyle = "#ffffff";

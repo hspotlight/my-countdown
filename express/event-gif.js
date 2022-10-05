@@ -16,6 +16,7 @@ router.get("/", (req, res) => {
     ? req.query.text
     : `Hacktoberfest Open Hack Day Bangkok ${currentYear}`;
   const padString = req.query.padding ? req.query.padding : "0";
+  const bgColor = req.query.bgColor ? req.query.bgColor : "#0000ff";
   const startDate = new Date().getTime();
   const eventDate = req.query.on
     ? req.query.on
@@ -26,7 +27,7 @@ router.get("/", (req, res) => {
   res.set("transfer-encoding", "");
   res.contentType("image/gif");
 
-  eventGif(res, endDate, eventName, padString, startDate);
+  eventGif(res, endDate, eventName, padString, startDate, bgColor);
 });
 router.post("/", (req, res) => res.json({ postBody: req.body }));
 
